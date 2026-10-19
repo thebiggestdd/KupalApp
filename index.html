@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kupal – Barkada photo wall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <span class="brand">Kupal</span>
+
+  <main>
+    <div class="upload-bar">
+      <input id="username" type="text" maxlength="30" placeholder="Type your name or username..." autocomplete="nickname" />
+      <button id="uploadBtn" class="pill primary" type="button">Upload</button>
+    </div>
+
+    <div class="file-row">
+      <input id="fileInput" type="file" accept="image/*" hidden />
+      <button id="chooseBtn" class="chip" type="button">Choose File</button>
+      <span id="fileStatus" class="chip" aria-live="polite">No file selected</span>
+    </div>
+
+    <p id="message" class="message" role="status"></p>
+
+    <h1>Barkada - Kupal, upload your random pictures<br />that you want to share with us!!</h1>
+
+    <section id="gallery" class="gallery" aria-label="Uploaded photos"></section>
+    <p id="empty" class="empty" hidden>No photos yet. Be the first to upload one.</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
